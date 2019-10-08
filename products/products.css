@@ -1,24 +1,33 @@
 article {
-	width: 200px;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7f0b2+0,fffcdd+100 */
-	background: #f7f0b2; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f7f0b2 0%, #fffcdd 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  #f7f0b2 0%,#fffcdd 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  #f7f0b2 0%,#fffcdd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	max-width: 200px;
+	background: linear-gradient(to bottom, #f7f0b2 0%,#FFFFFF 63%)
 }
 
 article>img {
-	width: 200px;
-	height:auto;
+	max-width: 90%;
+	padding: 0 5%;
+	height: auto;
+
 }
 
-article>p, button, h3 {
+article>p, h3 {
 	margin: 0.5rem;
 }
 
 .price {
-	float:left;
+	margin: 10px 0;
 }
+
 button {
-	background-color: rgb(236, 223, 29);
+	background-color: rgb(255, 154, 3);
+	color: white;
+	font-size: 20px;
+	margin: 10px 0;
+	width: 100%;
+	border-radius: 10px;
+}
+
+section {
+	display: block;
+	padding: 0 1rem;
 }

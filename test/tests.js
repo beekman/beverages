@@ -1,1 +1,1 @@
-import './some-file.test/js';
+import './products.test';
