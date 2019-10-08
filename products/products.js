@@ -1,10 +1,10 @@
 import beverages from '../data/beverages.js';
-import renderBeverages from './render-beverages.js';
+import renderBeverage from './render-beverages.js';
 
 const list = document.getElementById('beverages');
 
 for (let i = 0; i < beverages.length; i++) {
-    const beverage = beverage[i];
-    const dom = renderBeverages(beverage);
+    const beverage = beverages[i];
+    const dom = renderBeverage(beverage);
     list.appendChild(dom);
 }

@@ -1,9 +1,15 @@
-article {
-	max-width: 200px;
+
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+}
+main>article {
+	width: 32%;
 	background: linear-gradient(to bottom, #f7f0b2 0%,#FFFFFF 63%)
 }
 
-article>img {
+header>img {
 	max-width: 90%;
 	padding: 0 5%;
 	height: auto;
