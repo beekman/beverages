@@ -1,4 +1,4 @@
-import { makePrettyCurrency } from '../common/utils.js';
+import { toUSD } from '../common/utils.js';
 
 const makeTD = (content) => {
     const tdElement = document.createElement('td');
@@ -10,8 +10,8 @@ export default (beverage, order) => {
     const tableRow = document.createElement('tr');
 
     const totalPrice = order.quantity * beverage.price;
-    const prettyPrice = makePrettyCurrency(beverage.price);
-    const prettyTotal = makePrettyCurrency(totalPrice);
+    const prettyPrice = toUSD(beverage.price);
+    const prettyTotal = toUSD(totalPrice);
 
     const columnOne = makeTD(beverage.name);
     const columnTwo = makeTD(order.quantity);

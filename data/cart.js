@@ -14,3 +14,5 @@ export const cart = [{
     id: 'beer',
     quantity: 8
 }];
+
+export default cart;

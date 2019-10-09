@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import renderBeverage from '../products/render-beverages.js';
-import renderTableRow from '../shopping-cart/render-table-row.js';
+import renderTableRow from '../shopping-cart/render-line-item.js';
 const test = QUnit.test;
 QUnit.module('Render Fruit');
 
