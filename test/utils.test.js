@@ -6,31 +6,52 @@ import { findById, calcLineTotal, calcOrderTotal } from '../common/utils.js';
 const test = QUnit.test;
 QUnit.module('Utilities');
 
-test('finds an id from an array', assert => {
+test('find product by id', assert => {
     // arrange
-    // Set up your parameters and expectations
-    const coffee = {
-        id: 'coffee',
-        name: 'Coffee',
-        image: 'coffee.jpg',
-        description: 'A hot cuppa joe.',
-        category: 'hot',
-        price: 2.25,
-        cost: 0.50
-    };
+    const id = 'coffee';
+    const expected = 'Coffee';
 
-    const coffeeOrder = {
-        id: 'coffee',
-        quantity: 4
-    };
-
-    const expected = '<tr><td>Coffee</td><td>4</td><td>$2.25</td><td>$9.00</td></tr>';
-    //Act
-    // Call the function you're testing and set the result to a const
     // act
-    const beverageElementTR = renderTableRow(coffee, coffeeOrder);
-    const stringHTMLofBeverageElement = beverageElementTR.outerHTML;
-    //Assert
-    // Make assertions about what is expected valid result
-    assert.equal(stringHTMLofBeverageElement, expected);
+    const foundBeverage = findById(beverages, id);
+
+    // assert
+    assert.ok(foundBeverage);
+    assert.equal(foundBeverage.name, expected);
+});
+
+test('find product by id returns null if not found', assert => {
+    // arrange
+    const id = 'not found';
+    const expected = null;
+
+    // act
+    const foundBeverage = findById(beverages, id);
+
+    // assert
+    assert.equal(foundBeverage, expected);
+});
+
+test('calculate line total', (assert) => {
+    // arrange
+    const quantity = 3;
+    const price = 2.01;
+    const expected = 6.03;
+
+    // act
+    const total = calcLineTotal(quantity, price);
+
+    // assert
+    assert.equal(total, expected);
+});
+
+// This one can be left to students to do...
+test('calculate order total', (assert) => {
+    // arrange
+    const expected = 61.5;
+
+    // act
+    const orderTotal = calcOrderTotal(cart, beverages);
+
+    // assert
+    assert.equal(orderTotal, expected);
 });
