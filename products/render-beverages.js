@@ -67,9 +67,6 @@ function renderBeverage(beverage) {
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);
 
-        console.log(1 + ' ' + beverage.name + ' added to cart');
-        console.log(localStorage);
-
     });
 
     section.appendChild(price);
