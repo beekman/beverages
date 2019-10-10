@@ -5,8 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Shopping Cart</title>
+	<link rel="stylesheet" href="../common/main.css">
 </head>
 <body>
+	<h1><a href="/">Beverage Shop</a></h1>
 	<nav>
 		<ul>
 			<li>
@@ -20,33 +22,33 @@
 			</li>
 		</ul>
 	</nav>
-<main>
-        <table>
-            <thead>
-                <tr>
-                    <th class="align-left">Beverages</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
+	<main class="cart">
+		<table>
+			<thead>
+				<tr>
+					<th class="align-left">Beverages</th>
+					<th>Qty</th>
+					<th>Price</th>
+					<th>Total</th>
+				</tr>
+			</thead>
 
-            <tbody></tbody>
+			<tbody></tbody>
 
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th>Order Total:</th>
-                    <th id="order-total-cell"></th>
-                </tr>
-            </tfoot>
-        </table>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>Order Total:</th>
+					<th id="order-total-cell"></th>
+				</tr>
+			</tfoot>
+		</table>
 
-        <p class="order-now-container">
-            <button>Place Order</button>
-        </p>
-    </main>
+		<p class="order-now-container">
+			<button>Place Order</button>
+		</p>
+	</main>
 
-    <script type="module" src="shopping-cart.js"></script>
+	<script type="module" src="shopping-cart.js"></script>
 </body>
