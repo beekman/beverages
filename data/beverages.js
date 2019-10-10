@@ -55,8 +55,6 @@ const wine = {
     cost: 1.00
 };
 
-
-
 const beverages = [
     coffee,
     espresso,

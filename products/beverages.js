@@ -16,15 +16,11 @@ export function renderBeverages(beverage) {
     p.className = 'price';
 
     const usd = '$' + beverage.price.toFixed(2);
-    // const usd = beverage.price.toLocaleString('en-US', {
-    //     style: 'currency',
-    //     currency: 'USD'
-    // });
     p.textContent = usd;
 
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = beverage.code;
+    button.value = beverage.id;
     p.appendChild(button);
 
     li.appendChild(p);
