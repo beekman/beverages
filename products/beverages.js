@@ -18,10 +18,13 @@ export function renderBeverages(beverage) {
     const usd = '$' + beverage.price.toFixed(2);
     p.textContent = usd;
 
-    const button = document.createElement('button');
-    button.textContent = 'Add';
-    button.value = beverage.id;
-    p.appendChild(button);
+    const btn_add = document.createElement('button');
+    btn_add.textContent = 'Add';
+    btn_add.value = beverage.id;
+    btn_add.setAttribute('id', 'add_to_cart');
+
+
+    p.appendChild(btn_add);
 
     li.appendChild(p);
 
