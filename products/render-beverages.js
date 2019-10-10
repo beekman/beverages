@@ -56,20 +56,19 @@ function renderBeverage(beverage) {
         if (!lineItem) {
             lineItem = {
                 id: beverage.id,
-                quantity: qty
+                quantity: 1
             };
 
             cart.push(lineItem);
-        }
-        else {
-            lineItem.quantity= lineItem.quantity + qty;
+        } else {
+            lineItem.quantity = lineItem.quantity + qty;
         }
 
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);
 
-        console.log( qty + ' ' + beverage.name + ' added to cart');
-        console.log( localStorage );
+        console.log(1 + ' ' + beverage.name + ' added to cart');
+        console.log(localStorage);
 
     });
 
