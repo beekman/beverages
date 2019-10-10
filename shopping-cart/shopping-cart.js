@@ -1,4 +1,4 @@
-import cart from '../data/cart.js';
+import order from '../data/order.js';
 import beverages from '../data/beverages.js';
 import {
     findById,
@@ -12,6 +12,7 @@ const orderTotalCell = document.getElementById('order-total-cell');
 const placeOrderButton = document.getElementById('place-order-button');
 
 const localCart = localStorage.getItem('CART');
+let cart;
 
 if (localCart) {
     cart = JSON.parse(localCart);
@@ -31,7 +32,7 @@ const orderTotal = calcOrderTotal(cart, beverages);
 orderTotalCell.textContent = toUSD(orderTotal);
 
 if (cart.length === 0) {
-    placeOrderButton.disabled = true;
+    placeOrderButton.setAttribute('disabled', 'true')
 } else {
     placeOrderButton.addEventListener('click', () => {
         localStorage.removeItem('CART');

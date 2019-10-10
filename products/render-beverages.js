@@ -32,6 +32,8 @@ function renderBeverage(beverage) {
 
     const price = document.createElement('p');
     price.className = 'price';
+    price.textContent = toUSD(beverage.price);
+
     section.appendChild(price);
 
     const usd = '$' + beverage.price.toFixed(2);
@@ -41,7 +43,7 @@ function renderBeverage(beverage) {
     btn_add.textContent = 'Add';
     btn_add.value = beverage.id;
     let qty = 1;
-    btn_add.addEventListener('click', (qty) => {
+    btn_add.addEventListener('click', () => {
         let json = localStorage.getItem('CART');
         let cart;
         if (json) {
