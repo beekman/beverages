@@ -1,4 +1,3 @@
-import order from '../data/order.js';
 import beverages from '../data/beverages.js';
 import {
     findById,
@@ -32,11 +31,12 @@ const orderTotal = calcOrderTotal(cart, beverages);
 orderTotalCell.textContent = toUSD(orderTotal);
 
 if (cart.length === 0) {
-    placeOrderButton.setAttribute('disabled', 'true')
+    //placeOrderButton.setAttribute('disabled', 'true')
+    placeOrderButton.disabled = true;
 } else {
     placeOrderButton.addEventListener('click', () => {
         localStorage.removeItem('CART');
-        alert('Order placed:\n' + JSON.stringify(cart, true, 2));
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2) +". Returning to home page.");
         window.location = '../';
     });
 }

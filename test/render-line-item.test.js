@@ -20,7 +20,6 @@ test('renders a table row', assert => {
     const expected = '<tr><td>Coffee</td><td>4</td><td>$2.25</td><td>$9.00</td></tr>';
     //Act
     // Call the function you're testing and set the result to a const
-    // ac
     const dom = renderLineItem(coffee, lineItem);
     const html = dom.outerHTML;
 
