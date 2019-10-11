@@ -27,7 +27,6 @@ const orderTotal = calcOrderTotal(cart, beverages);
 orderTotalCell.textContent = toUSD(orderTotal);
 
 if (cart.length === 0) {
-    //placeOrderButton.setAttribute('disabled', 'true')
     placeOrderButton.disabled = true;
 } else {
     placeOrderButton.addEventListener('click', () => {
