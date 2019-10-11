@@ -34,18 +34,27 @@ function renderBeverage(beverage) {
     price.className = 'price';
     price.textContent = toUSD(beverage.price);
 
-    section.appendChild(price);
-
     const usd = '$' + beverage.price.toFixed(2);
     price.textContent = usd;
+
+    const input_qty = document.createElement('input');
+    input_qty.setAttribute('type', 'Number');
+    input_qty.value = 1;
+    input_qty.id = beverage.id + 'qty-input';
 
     const btn_add = document.createElement('button');
     btn_add.textContent = 'Add';
     btn_add.value = beverage.id;
-    let qty = 1;
+
+    section.appendChild(price);
+    section.appendChild(input_qty);
+    section.appendChild(btn_add);
+    
     btn_add.addEventListener('click', () => {
         let json = localStorage.getItem('CART');
         let cart;
+        let qty_in = document.getElementById(beverage.id + 'qty-input');
+        let qty = Number(qty_in.value);
         if (json) {
             cart = JSON.parse(json);
         } else {
@@ -56,7 +65,7 @@ function renderBeverage(beverage) {
         if (!lineItem) {
             lineItem = {
                 id: beverage.id,
-                quantity: 1
+                quantity: qty
             };
 
             cart.push(lineItem);
@@ -69,8 +78,7 @@ function renderBeverage(beverage) {
 
     });
 
-    section.appendChild(price);
-    section.appendChild(btn_add);
+
 
     return article;
 }

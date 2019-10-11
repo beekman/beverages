@@ -16,7 +16,7 @@ test('renders a beverage', assert => {
         cost: 0.50
     };
 
-    const expected = '<article class="product"><header><h3 class="hot">Coffee</h3><img src="../assets/coffee.jpg" alt="Coffee picture"></header><section><p class="description">A hot cuppa joe.</p><p class="price">$2.25</p><button value="coffee">Add</button></section></article>';
+    const expected = '<article class="product"><header><h3 class="hot">Coffee</h3><img src="../assets/coffee.jpg" alt="Coffee picture"></header><section><p class="description">A hot cuppa joe.</p><p class="price">$2.25</p><input type=\"Number\" id=\"coffeeqty-input\"><button value="coffee">Add</button></section></article>';
     //Act
     // Call the function you're testing and set the result to a const
     // act
