@@ -86,3 +86,9 @@ button:disabled {
     background: lightgray;
     color: darkgray;
 }
+.photo-grid {
+	display: grid;
+	
+
+
+}
