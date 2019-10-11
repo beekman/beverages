@@ -49,7 +49,7 @@ function renderBeverage(beverage) {
     section.appendChild(price);
     section.appendChild(input_qty);
     section.appendChild(btn_add);
-    
+
     btn_add.addEventListener('click', () => {
         let json = localStorage.getItem('CART');
         let cart;
