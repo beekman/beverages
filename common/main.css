@@ -86,9 +86,26 @@ button:disabled {
     background: lightgray;
     color: darkgray;
 }
+
+.photo-one {
+    grid-area: photo-one;
+}
+
+.photo-two {
+    grid-area: photo-two;
+}
+
+.photo-row {
+    grid-area: photo-row;
+}
+
+.home-copy {
+    grid-area: home-copy;
+}
+
 .photo-grid {
-	display: grid;
-	
-
-
+    display: grid;
+    grid-template-areas:
+        "photo-one home-copy photo-two"
+        "photo-row photo-row photo-row";
 }
