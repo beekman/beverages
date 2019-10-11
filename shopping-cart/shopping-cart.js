@@ -1,9 +1,5 @@
 import beverages from '../data/beverages.js';
-import {
-    findById,
-    calcOrderTotal,
-    toUSD
-} from '../common/utils.js';
+import { findById, calcOrderTotal, toUSD } from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
 
 const tbody = document.querySelector('tbody');
