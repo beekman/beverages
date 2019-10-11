@@ -1,14 +1,19 @@
-import cart from '../data/cart.js';
 import beverages from '../data/beverages.js';
-import {
-    findById,
-    calcOrderTotal,
-    toUSD
-} from '../common/utils.js';
+import { findById, calcOrderTotal, toUSD } from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
 
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
+const placeOrderButton = document.getElementById('place-order-button');
+
+const localCart = localStorage.getItem('CART');
+let cart;
+
+if (localCart) {
+    cart = JSON.parse(localCart);
+} else {
+    cart = [];
+}
 
 for (let i = 0; i < cart.length; i++) {
     const lineItem = cart[i];
@@ -20,3 +25,13 @@ for (let i = 0; i < cart.length; i++) {
 
 const orderTotal = calcOrderTotal(cart, beverages);
 orderTotalCell.textContent = toUSD(orderTotal);
+
+if (cart.length === 0) {
+    placeOrderButton.disabled = true;
+} else {
+    placeOrderButton.addEventListener('click', () => {
+        localStorage.removeItem('CART');
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2) + '. Returning to home page.');
+        window.location = '../';
+    });
+}

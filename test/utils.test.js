@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import beverages from '../data/beverages.js';
-import cart from '../data/cart.js';
+import cart from '../data/order.js';
 import { findById, calcLineTotal, calcOrderTotal } from '../common/utils.js';
 
 const test = QUnit.test;
