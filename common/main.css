@@ -2,6 +2,14 @@ article {
     border: 2px solid skyblue;
 }
 
+article.cta {
+    display: flex;
+}
+.cta img {
+    width: 60%;
+    height: auto;
+}
+
 h1 a,
 h2 a,
 h3 a {
