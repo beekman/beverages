@@ -11,9 +11,13 @@ main>article {
 }
 
 header>img {
-    max-width: 400px;
+    max-width: 100%;
     padding: 0 5%;
     height: auto;
+}
+
+header>h2 {
+    color: white;
 }
 
 article>p,
@@ -21,11 +25,35 @@ h3 {
     margin: 0.5rem;
 }
 
-.price {
-    margin: 10px 0;
+p {
+    margin-top: 1rem;
 }
 
 
+.price {
+    margin: 10px 0;
+    text-align: center;
+}
+
+input {
+    max-width: 2rem;
+    display: inline;
+    margin: 0 0 0 20%;
+    font-size: 18px;
+}
+
+button {
+    background-color: rgb(255, 154, 3);
+    color: white;
+    display: inline;
+    font-size: 20px;
+    margin: 0 5% 10px;
+    width: 40%;
+    max-width: 200px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
 
 section {
     display: block;

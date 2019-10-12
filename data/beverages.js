@@ -1,5 +1,21 @@
-
-
+const pggb = {
+    id: 'pan-galactic-gargle-blaster',
+    name: 'Pan Galactic Gargle Blaster',
+    image: 'pggb.jpg',
+    description: 'Considered by the Hitchhikers\' Guide to the Galaxy to be the "Best Drink in Existence". Its effects are similar to having your brains smashed out by a slice of lemon wrapped round a large gold brick.',
+    category: 'alcohol',
+    price: 7.00,
+    cost: 2.50
+};
+const butterbeer = {
+    id: 'butterbeer',
+    name: 'Butterbeer',
+    image: 'butterbeer2.jpg',
+    description: 'A popular wizarding beverage described as tasting "a little bit like less-sickly butterscotch." You\'re an alcoholic, Harry!',
+    category: 'alcohol',
+    price: 4.75,
+    cost: 1.50
+};
 const coffee = {
     id: 'coffee',
     name: 'Coffee',
@@ -18,6 +34,7 @@ const espresso = {
     price: 3.50,
     cost: 0.75
 };
+
 const tea = {
     id: 'tea',
     name: 'Tea',
@@ -56,6 +73,8 @@ const wine = {
 };
 
 const beverages = [
+    pggb,
+    butterbeer,
     coffee,
     espresso,
     tea,
