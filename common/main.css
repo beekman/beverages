@@ -5,6 +5,7 @@ article {
 article.cta {
     display: flex;
 }
+
 .cta img {
     width: 60%;
     height: auto;
@@ -116,4 +117,5 @@ button:disabled {
     grid-template-areas:
         "photo-one home-copy photo-two"
         "photo-row photo-row photo-row";
+
 }
