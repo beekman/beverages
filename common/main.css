@@ -1,14 +1,25 @@
-article {
-    border: 2px solid skyblue;
+* {
+    box-sizing: border-box;
 }
 
 article.cta {
     display: flex;
+    background-color: black;
+    color: white;
+}
+
+.cta div {
+    width: 60%;
+
 }
 
 .cta img {
-    width: 60%;
+    max-width: 100%;
     height: auto;
+}
+
+.cta .tagline {
+    font-size: 22px;
 }
 
 h1 a,
@@ -104,8 +115,20 @@ button:disabled {
     grid-area: photo-two;
 }
 
-.photo-row {
-    grid-area: photo-row;
+.photo-three {
+    grid-area: photo-three;
+}
+
+.photo-four {
+    grid-area: photo-four;
+}
+
+.photo-five {
+    grid-area: photo-five;
+}
+
+class^photo- {
+    width: 33%;
 }
 
 .home-copy {
@@ -116,6 +139,6 @@ button:disabled {
     display: grid;
     grid-template-areas:
         "photo-one home-copy photo-two"
-        "photo-row photo-row photo-row";
-
+        "photo-three photo-four photo-five";
+    grid-column-gap: 50px;
 }
