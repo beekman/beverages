@@ -90,6 +90,20 @@ nav ul li a:active {
 .cart table {
     margin: 0 auto;
     min-width: 400px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 4px 0px #ffffff;
+    /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow: 0px 0px 4px 0px #ffffff;
+    /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+
+p.order-now-container {
+    text-align: center;
+}
+
+button:disabled {
+    background: darkgray;
+    color: lightgray;
 }
 
 td {
@@ -110,10 +124,7 @@ td:nth-of-type(1) {
 
 
 
-button:disabled {
-    background: lightgray;
-    color: darkgray;
-}
+
 
 .photo-one {
     grid-area: photo-one;

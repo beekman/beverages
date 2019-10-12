@@ -1,6 +1,7 @@
 main {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 5%;
 }
 
 main>article {

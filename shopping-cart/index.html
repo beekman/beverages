@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Shopping Cart</title>
-	<link rel="stylesheet" href="../common/main.css">
-</head>
-<body>
-	<h1><a href="/">Beverage Shop</a></h1>
-	<nav>
-		<ul>
-			<li>
-				<a href="/">Home</a>
-			</li>
-			<li>
-				<a href="/products/">Products Page</a>
-			</li>
-			<li>
-				<a href="/shopping-cart/">Shopping Cart</a>
-			</li>
-		</ul>
-	</nav>
-	<main class="cart">
-		<table>
-			<thead>
-				<tr>
-					<th>Beverages</th>
-					<th>Qty</th>
-					<th>Price</th>
-					<th>Total</th>
-				</tr>
-			</thead>
 
-			<tbody></tbody>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Shopping Cart</title>
+		<link rel="stylesheet" href="../common/main.css">
+	</head>
 
-			<tfoot>
-				<tr>
-					<th></th>
-					<th></th>
-					<th>Order Total:</th>
-					<th id="order-total-cell"></th>
-				</tr>
-			</tfoot>
-		</table>
+	<body>
+		<header>
+			<h1><a href="/">Ben's Beverages</a></h1>
 
-		<p class="order-now-container">
-			<button id= "place-order-button">Place Order</button>
-		</p>
-	</main>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/products/">Products Page</a>
+					</li>
+					<li>
+						<a href="/shopping-cart/">Shopping Cart</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class="cart">
+			<table>
+				<thead>
+					<tr>
+						<th>Beverages</th>
+						<th>Qty</th>
+						<th>Price</th>
+						<th>Total</th>
+					</tr>
+				</thead>
 
-	<script type="module" src="shopping-cart.js"></script>
-</body>
+				<tbody></tbody>
+
+				<tfoot>
+					<tr>
+						<th></th>
+						<th></th>
+						<th>Order Total:</th>
+						<th id="order-total-cell"></th>
+					</tr>
+				</tfoot>
+			</table>
+
+			<p class="order-now-container">
+				<button id="place-order-button">Place Order</button>
+			</p>
+		</main>
+
+		<script type="module" src="shopping-cart.js"></script>
+	</body>
